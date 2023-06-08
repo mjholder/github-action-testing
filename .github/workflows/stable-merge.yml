@@ -32,6 +32,6 @@ jobs:
           git config user.email "<>"
           git fetch
           git checkout main-stable
-          git merge -Xtheirs main --allow-unrelated-histories
+          git rebase main
           git commit --amend -m "updating stable"
-          git push origin main-stable
+          git push --force origin main-stable
