@@ -36,4 +36,4 @@ jobs:
           git checkout main-stable
           git rebase main
           git commit --amend -m "updating stable"
-          git push --force origin main-stable
+          git push origin main-stable
