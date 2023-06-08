@@ -33,4 +33,4 @@ jobs:
           git fetch
           git checkout main-stable
           git merge main --allow-unrelated-histories
-          git push main-stable
+          git push origin main-stable
