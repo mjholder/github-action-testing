@@ -33,4 +33,5 @@ jobs:
           git fetch
           git checkout main-stable
           git merge main --allow-unrelated-histories
+          git commit --amend -m "updating stable"
           git push origin main-stable
