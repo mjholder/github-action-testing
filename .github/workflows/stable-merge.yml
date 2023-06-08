@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: stable-merge
 
 # Controls when the workflow will run
 # This will only run when a branch is merged into main
@@ -14,7 +14,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  if_merged:
+  on_merge:
     # only run jobs when we successfully merged our PR to main
     if: github.event.pull_request.merged == true
     # The type of runner that the job will run on
@@ -27,8 +27,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
+      # Updates stable branch to from main branch
+      - name: update-stable
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
